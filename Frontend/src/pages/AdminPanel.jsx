@@ -213,7 +213,6 @@ const AdminPanel = () => {
       fetchSalesByMonth();
       fetchTopProducts();
     }
-    // eslint-disable-next-line
   }, [section]);
 
   const fetchStats = async () => {
@@ -292,13 +291,13 @@ const AdminPanel = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-blue-800 text-white flex flex-col py-8 px-4 min-h-screen">
-        <h2 className="text-2xl font-bold mb-8 text-center">Administracion Libros</h2>
+      <aside className="w-64 bg-gray-800 text-white flex flex-col py-8 px-4 min-h-screen border-r border-gray-200">
+        <h2 className="text-2xl font-bold mb-8 text-center text-gray-100">Administracion Libros</h2>
         <nav className="flex flex-col gap-2">
-          <button onClick={() => setSection('dashboard')} className={`text-left px-4 py-2 rounded transition ${section === 'dashboard' ? 'bg-blue-600 font-semibold' : 'hover:bg-blue-700'}`}>Dashboard</button>
-          <button onClick={() => setSection('productos')} className={`text-left px-4 py-2 rounded transition ${section === 'productos' ? 'bg-blue-600 font-semibold' : 'hover:bg-blue-700'}`}>Productos</button>
-          <button onClick={() => setSection('pedidos')} className={`text-left px-4 py-2 rounded transition ${section === 'pedidos' ? 'bg-blue-600 font-semibold' : 'hover:bg-blue-700'}`}>Pedidos</button>
-          <button onClick={() => setSection('usuarios')} className={`text-left px-4 py-2 rounded transition ${section === 'usuarios' ? 'bg-blue-600 font-semibold' : 'hover:bg-blue-700'}`}>Usuarios</button>
+          <button onClick={() => setSection('dashboard')} className={`text-left px-4 py-2 rounded transition text-gray-100 ${section === 'dashboard' ? 'bg-gray-700 font-semibold' : 'hover:bg-gray-700'}`}>Dashboard</button>
+          <button onClick={() => setSection('productos')} className={`text-left px-4 py-2 rounded transition text-gray-100 ${section === 'productos' ? 'bg-gray-700 font-semibold' : 'hover:bg-gray-700'}`}>Productos</button>
+          <button onClick={() => setSection('pedidos')} className={`text-left px-4 py-2 rounded transition text-gray-100 ${section === 'pedidos' ? 'bg-gray-700 font-semibold' : 'hover:bg-gray-700'}`}>Pedidos</button>
+          <button onClick={() => setSection('usuarios')} className={`text-left px-4 py-2 rounded transition text-gray-100 ${section === 'usuarios' ? 'bg-gray-700 font-semibold' : 'hover:bg-gray-700'}`}>Usuarios</button>
         </nav>
       </aside>
 
